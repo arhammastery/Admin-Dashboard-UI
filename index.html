@@ -4,22 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+      rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
     <title>Dashboard UI Grid</title>
 </head>
 <body>
     <header class="header">
-        <button>Close</button>
-        <span>LOGO</span>
-        <div>UserIMG</div>
+        <div onclick="openSidebar()" class="open-btn">
+            <span class="material-icons-outlined">
+                menu
+            </span>
+        </div>
+        <span class="logo-title-2">Shop<span style="color: red;">Zen</span></span>
+        <div class="logo">
+            <img src="image001.png" alt="" width="40px">
+        </div>
     </header>
 
-    <section class="sidebar">
-        <img src="image001.png" alt="" width="50px">
-        <a href="#">Dashboard</a>
+    <section class="sidebar" id="sidebar">
+        <span class="logo-title">Shop<span style="color: red;">Zen</span></span>
+        <a href="#"><span class="material-icons-outlined">
+            space_dashboard
+            </span>Dashboard</a>
         <a href="#">Products</a>
         <a href="#">Category</a>
-        <a href="#">Orderse</a>
+        <a href="#">Orders</a>
         <a href="#">Logout</a>
+        <div onclick="closeSidebar()" class="close-btn">
+            <span class="material-icons-outlined">
+                close
+            </span>
+        </div>
     </section>
 
     <main class="main">

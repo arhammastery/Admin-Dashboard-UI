@@ -8,6 +8,8 @@ body {
     grid-template-areas: 
     "side header"
     "side main";
+    position: relative;
+    font-family: 'Poppins', sans-serif;
 }
 
 .header {
@@ -19,12 +21,16 @@ body {
     justify-content: space-between;
 }
 
+.logo img{
+    border-radius: 1rem;
+}
+
 .sidebar{
     background-color: #1c1f23;
     grid-area: side;
     display: flex;
     flex-direction: column;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     padding: 20px;
 }
 
@@ -36,10 +42,14 @@ body {
   text-decoration: none;
 }
 
+.sidebar a:hover{
+    color: #4f6fee;
+}
+
 .main{
     background-color: #c3c5ca;
     grid-area: main;
-
+    position: relative;
     padding: 20px;
 
     display: grid;
@@ -82,16 +92,71 @@ body {
     grid-area: c6;
 }
 
+.sidebar-responsive {
+    display: flex !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 200px;
+    height: 100%;
+    transition: 0.3s all;
+}
+
+.open-btn {
+    display: none;
+}
+
+.close-btn {
+    display: none;
+}
+
+.logo-title {
+    color: white;
+}
+
+.logo-title-2 {
+    display: none;
+}
+
+
 
 @media (max-width: 768px) {
-    .main{
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(6, 200px);
-        grid-template-areas: initial;
+    body {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "header"
+        "main";
+        overflow-x: hidden;
+    }
+  
+    .sidebar {
+      display: none;
     }
 
-    .card{
-        grid-area: initial !important;
-    }  
-}
+
+    .main {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(6, 200px);
+      grid-template-areas:
+        "c1"
+        "c2"
+        "c3"
+        "c4"
+        "c5"
+        "c6";
+    }
+
+    .open-btn {
+        display: block;
+    }
+    
+    .close-btn {
+        position: absolute;
+        display: block;
+        left: 180px;
+        color: #fff;
+    }
+    
+  }
 
