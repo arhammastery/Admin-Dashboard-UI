@@ -9,7 +9,7 @@ body {
     "side header"
     "side main";
     position: relative;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif; 
 }
 
 .header {
@@ -30,21 +30,36 @@ body {
     grid-area: side;
     display: flex;
     flex-direction: column;
-    font-size: 1.3rem;
+    font-size: 1rem;
     padding: 20px;
 }
 
 .sidebar a{
-    margin-top: 50px;
+    margin-top: 40px;
     color: white;
 }
 .sidebar a:link{
   text-decoration: none;
 }
 
-.sidebar a:hover{
-    color: #4f6fee;
+.link{
+    display: flex;
+    align-items: center;
 }
+
+.link2{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 20px;
+}
+
+.link3{
+    display: flex;
+    align-items: center;
+}
+
+
 
 .main{
     background-color: #c3c5ca;
@@ -58,8 +73,8 @@ body {
     gap: 20px;
     grid-template-areas: 
     "c1 c2 c3"
-    "c4 c4 c5"
-    "c4 c4 c6";
+    "c4 c4 c4"
+    "c4 c4 c4";
 }
 
 .card{
@@ -84,13 +99,6 @@ body {
     grid-area: c4;
 }
 
-.card:nth-child(5){
-    grid-area: c5;
-}
-
-.card:nth-child(6){
-    grid-area: c6;
-}
 
 .sidebar-responsive {
     display: flex !important;
@@ -113,10 +121,18 @@ body {
 
 .logo-title {
     color: white;
+    border-color: #1c1f23;
 }
 
 .logo-title-2 {
     display: none;
+}
+
+.search-box{
+    border: none;
+    border-radius: 1rem;
+    font-size: large; 
+    padding: 5px;
 }
 
 
@@ -143,8 +159,7 @@ body {
         "c2"
         "c3"
         "c4"
-        "c5"
-        "c6";
+        "c4";
     }
 
     .open-btn {
@@ -156,6 +171,14 @@ body {
         display: block;
         left: 180px;
         color: #fff;
+    }
+
+    .link2{
+        bottom: 60px;
+    }
+
+    .link3{
+        display: none;
     }
     
   }

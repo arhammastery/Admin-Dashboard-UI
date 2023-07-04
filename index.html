@@ -1,55 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
-      rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
     <title>Dashboard UI Grid</title>
-</head>
-<body>
+  </head>
+  <body>
     <header class="header">
-        <div onclick="openSidebar()" class="open-btn">
-            <span class="material-icons-outlined">
-                menu
-            </span>
-        </div>
-        <span class="logo-title-2">Shop<span style="color: red;">Zen</span></span>
-        <div class="logo">
-            <img src="image001.png" alt="" width="40px">
-        </div>
+      <div onclick="openSidebar()" class="open-btn">
+        <span class="material-icons-outlined"> menu </span>
+      </div>
+      <span class="logo-title-2">Shop<span style="color: red">Zen</span></span>
+      <div class="link3">
+        <span
+          style="margin-right: 2px; color: gray"
+          class="material-icons-outlined"
+        >
+          search
+        </span>
+        <input
+          class="search-box"
+          type="search"
+          name="search"
+          id="search"
+          placeholder="Search"
+        />
+      </div>
+      <div class="logo">
+        <img src="image001.png" alt="" width="40px" />
+      </div>
     </header>
 
     <section class="sidebar" id="sidebar">
-        <span class="logo-title">Shop<span style="color: red;">Zen</span></span>
-        <a href="#"><span class="material-icons-outlined">
-            space_dashboard
-            </span>Dashboard</a>
-        <a href="#">Products</a>
+      <span class="logo-title">Shop<span style="color: red">Zen</span></span>
+      <div class="link">
+        <span
+          style="margin-top: 37px; margin-right: 3px; color: aliceblue"
+          class="material-icons-outlined"
+        >
+          space_dashboard
+        </span>
+        <a href="#">Dashboard</a>
+      </div>
+
+      <div class="link">
+        <span
+          style="margin-top: 37px; margin-right: 3px; color: aliceblue"
+          class="material-icons-outlined"
+        >
+          view_kanban
+        </span>
         <a href="#">Category</a>
+      </div>
+
+      <div class="link">
+        <span
+          style="margin-top: 37px; margin-right: 3px; color: aliceblue"
+          class="material-icons-outlined"
+        >
+          summarize
+        </span>
         <a href="#">Orders</a>
+      </div>
+
+      <div class="link">
+        <span
+          style="margin-top: 37px; margin-right: 3px; color: aliceblue"
+          class="material-icons-outlined"
+        >
+          settings
+        </span>
+        <a href="#">Settings</a>
+      </div>
+
+      <div class="link2">
+        <span
+          style="margin-top: 37px; margin-right: 3px; color: aliceblue"
+          class="material-icons-outlined"
+        >
+          logout
+        </span>
         <a href="#">Logout</a>
-        <div onclick="closeSidebar()" class="close-btn">
-            <span class="material-icons-outlined">
-                close
-            </span>
-        </div>
+      </div>
+
+      <div onclick="closeSidebar()" class="close-btn">
+        <span class="material-icons-outlined"> close </span>
+      </div>
     </section>
 
     <main class="main">
-        <div class="card">
-            <h4>Order</h4>
-            <div>200</div>
-        </div>
-        <div class="card">Revenue</div>
-        <div class="card">Logo</div>
-        <div class="card">Recent orders</div>
-        <div class="card">Empty</div>
-        <div class="card">Empty 1</div>
+      <div class="card">
+        <h4>Order</h4>
+        <p>200</p>
+      </div>
+      <div class="card">Revenue</div>
+      <div class="card">Logo</div>
+      <div class="card">Recent orders</div>
     </main>
 
     <script src="index.js"></script>
-</body>
+  </body>
 </html>
